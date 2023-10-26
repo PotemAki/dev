@@ -1,0 +1,48 @@
+<div class="container" #appHome>
+  <div class="left-side">
+    <div class="header">
+      <h1 [@slideSide1] class="header-title">Front-End Angular Developer</h1>
+      <p [@slideSide2] class="subtext">Passionate developer dedicated to creating awesome web experiences.</p>
+    </div>
+    <div [@fadeInOut] class="footer">
+      <div>
+        <a href="https://github.com/PotemAki" target=”_blank”>
+          <button class="footer-button shine-button" mat-button>
+            <img class="footer-icon" src="assets/github-icon.svg">
+            <p>GitHub</p>
+          </button>
+        </a>
+      </div>
+      <div>
+        <button class="footer-button shine-button" mat-button (click)="openAboutMe()">
+          <img class="footer-icon" src="assets/me-icon.svg">
+          <p>About me</p>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="right-side">
+    <button [@fadeInOut] class="skill-set pulse-button" mat-raised-button (click)="openSkillsInfo()">
+      <div class="skill-title">Skills</div>
+      <div class="icons">
+        <div class="icons-row1">
+          <img class="icon" src="assets/js-icon.svg">
+          <img class="icon" src="assets/angular-icon.svg">
+        </div>
+        <div class="icons-row2">
+          <img class="icon" src="assets/mongo-icon.svg">
+          <img class="icon" src="assets/express-icon.svg">
+          <img class="icon" src="assets/nodejs-icon.svg">
+        </div>
+        <div class="icons-row3">
+          <img class="icon" src="assets/html-icon.svg">
+          <img class="icon" src="assets/css3-icon.svg">
+          <img class="icon" src="assets/bootstrap-icon.svg">
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+<div #appProjects id="appProjects">
+  <app-projects></app-projects>
+</div>

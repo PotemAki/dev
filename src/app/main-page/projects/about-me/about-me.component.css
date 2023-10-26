@@ -1,0 +1,95 @@
+.container {
+  width: 90%;
+  height: 90%;
+  padding: 20px;
+}
+
+.custom-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.skill-list{
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.left-side {
+  flex: 1;
+  padding: 16px;
+}
+
+.separator {
+  border-right: 1px solid #ccc;
+  height: 100%;
+}
+
+.right-side {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+.left-side hr{
+  width: 100%;
+}
+.left-side h2{
+ color: rgb(134, 134, 134);
+ cursor: pointer;
+ transition: 0.3s;
+}
+.left-side h2:hover {
+  color: rgb(54, 54, 54);
+}
+.active {
+  color: black !important;
+}
+.custom-dialog-actions button{
+  font-size: 16px;
+}
+@media (max-width: 740px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+  }
+  .left-side {
+    display: flex;
+  }
+  .left-side hr{
+    max-width: 0.1px;
+  }
+  .separator{
+    display: none;
+  }
+  hr{
+    max-height: 50px;
+  }
+}
+@media (max-width: 490px) {
+  .left-side {
+    justify-content: center;
+  }
+  .left-side h2{
+    padding: 0px;
+    font-size: 15px;
+  }
+  .right-side{
+    padding: 0px;
+  }
+  .right-side p{
+    font-size: 15px;
+  }
+}
+@media (max-width: 350px){
+  .left-side h2{
+    font-size: 12px;
+  }
+  .right-side p{
+    font-size: 12px;
+  }
+}

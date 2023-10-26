@@ -1,0 +1,8 @@
+.custom-dialog-container {
+  width: 80%;
+}
+
+.custom-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}

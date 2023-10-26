@@ -1,0 +1,12 @@
+.custom-dialog-container {
+  width: 80%;
+}
+
+.custom-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.skill-list{
+  font-weight: bold;
+  margin-top: -10px;
+}

@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="left-side">
+    <h2 mat-dialog-title [ngClass]="{active: selectedTab1 === true}" (click)="showTab1()">About me</h2>
+    <hr>
+    <h2 mat-dialog-title [ngClass]="{active: selectedTab2}" (click)="showTab2()">Experience</h2>
+    <hr>
+    <h2 mat-dialog-title [ngClass]="{active: selectedTab3}" (click)="showTab3()">My skills</h2>
+  </div>
+  <div class="separator"></div>
+  <div class="right-side">
+    <div [@fadeInOut] *ngIf="selectedTab1">
+      <mat-dialog-content>
+        <p class="skill-list">Font-end</p>
+        <p class="desc-one">Coding is fun for me - I enjoy building applications and resolving issues. My goal is to possibly enjoy my work. That's why I figured out it would be great to do it professionally.</p>
+        <p class="skill-list">What's my goal.</p>
+        <p class="desc-one">Eventually I want to work as a developer. I believe it's something that requires a lot of pratice to be really good at. That's why I aim learn and grow in it. Eventually overtime I would like to start my journey with backend languages.
+        </p>
+        <p class="skill-list">Write me:</p>
+        <p class="desc-one">michalmatyka194@gmail.com</p>
+      </mat-dialog-content>
+    </div>
+    <div [@fadeInOut] *ngIf="selectedTab2">
+      <mat-dialog-content>
+        <p class="skill-list">Configuration Analyst</p>
+        <p class="desc-one">
+          In this role I'm implementing websites in the internal environment for our clients. This is very technical role, where I cooperate with System Analyst and their documentation to build a product, client asked for. This goes from implementing, unit tests, full test phase to final production. Full SDLC cycle.
+        </p>
+        <p class="skill-list">Pensions Administrator Entry</p>
+        <p class="desc-one">
+          In this role my work was more diverse and becouse of that i grasped general soft and hard skills. For example: SQL data reports, working with DataBase, performing calculations to increase our client's pensions, redacting and providing acces to documents hold by company to client's members along GDPR's law.
+        </p>
+      </mat-dialog-content>
+    </div>
+    <div [@fadeInOut] *ngIf="selectedTab3">
+      <mat-dialog-content>
+        <p>I've completed courses and worked on my projects using:</p>
+        <p class="skill-list">JavaScript, Angular, HTML/CSS, Bootstrap, Materials.</p>
+        <p>Additionally to graps better underestanding of full stack applications I've worked with:</p>
+        <p class="skill-list">Firebase, MongoDB, Express, NodeJS</p>
+        <p>Apart from that, because of my work, I've experienced work with:</p>
+        <p class="skill-list">SQL, Excel and over 3 years of client related experience.</p>
+      </mat-dialog-content>
+    </div>
+    <mat-dialog-actions class="custom-dialog-actions">
+      <button mat-button (click)="closeDialog()">Close</button>
+    </mat-dialog-actions>
+  </div>
+</div>

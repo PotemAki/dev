@@ -1,0 +1,14 @@
+<div class="dialog-content">
+  <h2 mat-dialog-title>{{ data.title }}</h2>
+  <mat-dialog-content>
+    <li *ngIf="data.contentLine1">{{ data.contentLine1}}</li>
+    <li *ngIf="data.contentLine2">{{ data.contentLine2}}</li>
+    <li *ngIf="data.contentLine3">{{ data.contentLine3}}</li>
+    <li *ngIf="data.contentLine4">{{ data.contentLine4}}</li>
+    <li *ngIf="data.contentLine5">{{ data.contentLine5}}</li>
+    <li *ngIf="data.contentLine6">{{ data.contentLine6}}</li>
+  </mat-dialog-content>
+  <mat-dialog-actions class="custom-dialog-actions">
+    <button mat-button (click)="closeDialog()">Close</button>
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,37 @@
+<mat-drawer-container class="container" autosize >
+  <mat-drawer #drawer class="sidenav" mode="over" >
+    <div class="inside-sidenav">
+        <button class="nav-button2" mat-raised-button (click)="onHome()">Home</button>
+        <button class="nav-button2" mat-raised-button (click)="onCV()">CV</button>
+    </div>
+    <hr>
+    <div class="inside-sidenav_2">
+      <button class="nav-button2" mat-raised-button (click)="onProjects()">Angular Projects</button>
+      <button class="nav-button2" mat-raised-button (click)="onJSProjects()">JavaScript Projects</button>
+    </div>
+    <hr>
+    <div class="inside-sidenav_3">
+      <a href="https://github.com/PotemAki" target=”_blank”>
+        <button class="nav-button" mat-button>GitHub</button>
+      </a>
+      <button class="nav-button" mat-button (click)="onAboutMe()">About me</button>
+    </div>
+  </mat-drawer>  
+  <mat-toolbar class="header-content">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="my-app shine-button" routerLink="/">Michał.dev</span>
+    <span class="spacer"></span>
+    <div class="right-header" >
+      <button class="nav-button" mat-button (click)="onHome()">Home</button>
+      <button class="nav-button" mat-button (click)="onAboutMe()">About</button>
+      <button class="nav-button" mat-button (click)="onProjects()">Projects</button>
+      <button class="nav-button" mat-button (click)="onCV()">CV</button>
+    </div>
+  </mat-toolbar>
+  <!-- rest of the page -->
+  <div class="page">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

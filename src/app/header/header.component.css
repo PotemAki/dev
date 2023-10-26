@@ -1,0 +1,90 @@
+.spacer {
+  flex: 1;
+}
+mat-drawer-container {
+  height: 100%;
+  background-color: white;
+}
+.sidenav{
+  position: fixed;
+  padding: 20px;
+  width: 30%;
+  max-width: 300px;
+  height: 100%;
+}
+.inside-sidenav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.inside-sidenav_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.inside-sidenav_3 {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-content {
+  position: fixed;
+  z-index: 9999;
+
+  background-color: white;
+}
+.my-app{
+  cursor: pointer;
+  margin-left: 10px;
+}
+.nav-button{
+  font-size: 16px;
+}
+.nav-button:hover {
+  opacity: 0.9;
+}
+.sidenav-buttons{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.sidenav-buttons button{
+  margin-bottom: 5px;
+}
+.nav-button2 {
+  margin-bottom: 10px;
+  width: 90%;
+}
+@keyframes shine {
+  50% {
+    color: #ffffff;
+  }
+}
+.shine-button {
+  animation: shine 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 700px) {
+  .sidenav{
+    position: fixed;
+    width: 40%;
+    max-width: 300px;
+  }
+}
+@media (max-width: 520px) {
+  .right-header{
+    display: none;
+  }
+  .sidenav{
+    width: 50%;
+    padding: 5px;
+  }
+}
