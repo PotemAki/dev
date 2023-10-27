@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { DialogService } from './projects/dialog.service';
 import { ProjectsService } from './projects.service';
 import { Subscription } from 'rxjs';
