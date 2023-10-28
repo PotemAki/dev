@@ -98,6 +98,17 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine2: `Give us details of the color, so we can use it.`,
     });
   }
+  openDialogVariant10() {
+    this.dialogService.openDialog({
+      title: 'Posts App',
+      contentLine1: `App connets through NodeJS using Express to database - MongoDB, where it stores all users and posts,`,
+      contentLine2: `We create account to fully use website, backend sever encrypt password using bcrypt, to make it safe,`,
+      contentLine3: `We can add post with picture, we can later edit that post (if we are creator) and change or delet that picture,`,
+      contentLine4: `Small details: we can like post and then see people who liked it by hovering on it, we can check other users and their profile by navigating sidebar`,
+      contentLine5: `We can edit our account: change nickname, password or profile picture.`,
+      contentLine6: `App uses AWE hosting service as github doesnt support backend hosting.`
+    });
+  }
 
   ngOnDestroy(): void {
     this.sub3.unsubscribe()
