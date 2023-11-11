@@ -39,6 +39,8 @@ export class MainPageComponent implements OnInit, OnDestroy{
   @ViewChild('appHome', { read: ElementRef }) appHome: ElementRef;
   sub1: Subscription;
   sub2: Subscription;
+  darkMode = false
+  private isDarkModeSub: Subscription
 
   constructor(private dialogService: DialogService, public projectsService: ProjectsService) {}
 
@@ -48,6 +50,9 @@ export class MainPageComponent implements OnInit, OnDestroy{
     })
     this.sub2 = this.projectsService.navigateHome.subscribe(() =>{
       this.scroll(this.appHome.nativeElement)
+    })
+    this.isDarkModeSub = this.projectsService.darkMode.subscribe((res) => {
+      this.darkMode = res
     })
   }
   openAboutMe() {
@@ -62,5 +67,6 @@ export class MainPageComponent implements OnInit, OnDestroy{
   ngOnDestroy(){
     this.sub1.unsubscribe()
     this.sub2.unsubscribe()
+    this.isDarkModeSub.unsubscribe()
   }
 }

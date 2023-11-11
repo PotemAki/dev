@@ -1,33 +1,52 @@
 <mat-drawer-container class="container" autosize >
-  <mat-drawer #drawer class="sidenav" mode="over" >
+  <mat-drawer #drawer class="sidenav" mode="over" [ngClass]="{dark: darkMode}">
     <div class="inside-sidenav">
-        <button class="nav-button2" mat-raised-button (click)="onHome()">Home</button>
-        <button class="nav-button2" mat-raised-button (click)="onCV()">CV</button>
+        <button class="nav-button2" mat-raised-button (click)="onHome()" 
+        [ngClass]="{dark2: darkMode}">Home</button>
+        <button class="nav-button2" mat-raised-button (click)="onCV()" 
+        [ngClass]="{dark2: darkMode}">CV</button>
     </div>
-    <hr>
     <div class="inside-sidenav_2">
-      <button class="nav-button2" mat-raised-button (click)="onProjects()">Angular Projects</button>
-      <button class="nav-button2" mat-raised-button (click)="onJSProjects()">JavaScript Projects</button>
+      <button class="nav-button2" mat-raised-button (click)="onProjects()"
+      [ngClass]="{dark2: darkMode}">Angular Projects</button>
+      <button class="nav-button2" mat-raised-button (click)="onJSProjects()"
+      [ngClass]="{dark2: darkMode}">JavaScript Projects</button>
     </div>
     <hr>
     <div class="inside-sidenav_3">
       <a href="https://github.com/PotemAki" target=”_blank”>
-        <button class="nav-button" mat-button>GitHub</button>
+        <button class="nav-button" mat-button 
+        [ngClass]="{dark3: darkMode}">GitHub</button>
       </a>
-      <button class="nav-button" mat-button (click)="onAboutMe()">About me</button>
+      <button class="nav-button" mat-button (click)="onAboutMe()" 
+      [ngClass]="{dark3: darkMode}">About me</button>
     </div>
   </mat-drawer>  
-  <mat-toolbar class="header-content">
+  <mat-toolbar class="header-content" [ngClass]="{dark: darkMode}">
     <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="my-app shine-button" routerLink="/">Michał.dev</span>
+    <span class="my-app shine-button" routerLink="/" [ngClass]="{dark5: darkMode}">Michał.dev</span>
     <span class="spacer"></span>
+    <div class="dark-mode" *ngIf="!darkMode">
+      <span class="material-symbols-outlined dark-icon" (click)="toDarkMode()">
+        dark_mode
+        </span>
+    </div>
+    <div class="dark-mode" *ngIf="darkMode">
+      <span class="material-symbols-outlined light-icon" (click)="toDarkMode()">
+        light_mode
+        </span>
+    </div>
     <div class="right-header" >
-      <button class="nav-button" mat-button (click)="onHome()">Home</button>
-      <button class="nav-button" mat-button (click)="onAboutMe()">About</button>
-      <button class="nav-button" mat-button (click)="onProjects()">Projects</button>
-      <button class="nav-button" mat-button (click)="onCV()">CV</button>
+      <button class="nav-button" mat-button (click)="onHome()"  
+      [ngClass]="{dark4: darkMode}">Home</button>
+      <button class="nav-button" mat-button (click)="onAboutMe()"
+      [ngClass]="{dark4: darkMode}">About</button>
+      <button class="nav-button" mat-button (click)="onProjects()"
+      [ngClass]="{dark4: darkMode}">Projects</button>
+      <button class="nav-button" mat-button (click)="onCV()"
+      [ngClass]="{dark4: darkMode}">CV</button>
     </div>
   </mat-toolbar>
   <!-- rest of the page -->

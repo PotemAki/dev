@@ -1,29 +1,36 @@
-<div class="container" #appHome>
+<div class="container" #appHome [ngClass]="{dark: darkMode}">
   <div class="left-side">
     <div class="header">
       <h1 [@slideSide1] class="header-title">Front-End Angular Developer</h1>
-      <p [@slideSide2] class="subtext">Passionate developer dedicated to creating awesome web experiences.</p>
+      <p [@slideSide2] class="subtext" [ngClass]="{dark2: darkMode}">Passionate developer dedicated to creating awesome web experiences.</p>
     </div>
     <div [@fadeInOut] class="footer">
       <div>
         <a href="https://github.com/PotemAki" target=”_blank”>
-          <button class="footer-button shine-button" mat-button>
-            <img class="footer-icon" src="assets/github-icon.svg">
+          <button class="footer-button shine-button" mat-button 
+          [ngClass]="{dark3: darkMode}">
+            <img class="footer-icon" src="assets/github-icon.svg" *ngIf="!darkMode">
+            <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
             <p>GitHub</p>
           </button>
         </a>
       </div>
       <div>
-        <button class="footer-button shine-button" mat-button (click)="openAboutMe()">
-          <img class="footer-icon" src="assets/me-icon.svg">
+        <button class="footer-button shine-button" mat-button 
+        [ngClass]="{dark3: darkMode}"
+        (click)="openAboutMe()">
+          <img class="footer-icon2" src="assets/me-icon.png"
+          *ngIf="!darkMode">
+          <img class="footer-icon2" src="assets/me-icon-light.png"
+          *ngIf="darkMode">
           <p>About me</p>
         </button>
       </div>
     </div>
   </div>
   <div class="right-side">
-    <button [@fadeInOut] class="skill-set pulse-button" mat-raised-button (click)="openSkillsInfo()">
-      <div class="skill-title">Skills</div>
+    <button [@fadeInOut] class="skill-set pulse-button" mat-raised-button (click)="openSkillsInfo()" [ngClass]="{dark4: darkMode}">
+      <div class="skill-title" [ngClass]="{dark2: darkMode}">Skills</div>
       <div class="icons">
         <div class="icons-row1">
           <img class="icon" src="assets/js-icon.svg">

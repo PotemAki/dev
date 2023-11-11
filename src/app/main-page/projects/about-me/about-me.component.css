@@ -1,6 +1,5 @@
 .container {
-  width: 90%;
-  height: 90%;
+  height: 100%;
   padding: 20px;
 }
 
@@ -50,6 +49,21 @@
 }
 .custom-dialog-actions button{
   font-size: 16px;
+}
+.dark{
+  background-color: rgb(41, 41, 41) !important;
+}
+.dark2{
+  color: white !important
+}
+.dark3{
+  color: rgb(201, 201, 201);
+}
+.dark4{
+  color: white;
+}
+.dark4:hover{
+  background-color: rgb(53, 53, 53) !important;
 }
 @media (max-width: 740px) {
   .container {

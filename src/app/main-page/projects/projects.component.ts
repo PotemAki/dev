@@ -11,13 +11,18 @@ import { ProjectsService } from '../projects.service';
 export class ProjectsComponent implements OnInit, OnDestroy{
   @ViewChild('appJSProjects', { read: ElementRef }) appJSProjects: ElementRef;
   sub3: Subscription;
+  darkMode = false
+  private isDarkModeSub: Subscription
+
   constructor(private dialogService: DialogService, public projectsService: ProjectsService) {}
 
   ngOnInit() {
     this.sub3 = this.projectsService.navigateJSProjects.subscribe(() =>{
       this.scroll(this.appJSProjects.nativeElement)
     })
-   
+    this.isDarkModeSub = this.projectsService.darkMode.subscribe((res) => {
+      this.darkMode = res
+    })
   }
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
@@ -102,9 +107,9 @@ export class ProjectsComponent implements OnInit, OnDestroy{
     this.dialogService.openDialog({
       title: 'Posts App',
       contentLine1: `App connets through NodeJS using Express to database - MongoDB, where it stores all users and posts,`,
-      contentLine2: `We create account to fully use website, backend sever encrypt password using bcrypt, to make it safe,`,
+      contentLine2: `We create account to fully use website, backend sever encrypt password using bcrypt, to make it safe. You can use ready account; login: michal@gmail.com, password: testtest,`,
       contentLine3: `We can add post with picture, we can later edit that post (if we are creator) and change or delet that picture,`,
-      contentLine4: `Small details: we can like post and then see people who liked it by hovering on it, we can check other users and their profile by navigating sidebar`,
+      contentLine4: `Small details: we can like post and then see people who liked it by hovering on it, we can check other users and their profile by navigating sidebar, we can switch to day/night mode,`,
       contentLine5: `We can edit our account: change nickname, password or profile picture.`,
       contentLine6: `App uses AWE hosting service as github doesnt support backend hosting.`
     });
@@ -112,5 +117,6 @@ export class ProjectsComponent implements OnInit, OnDestroy{
 
   ngOnDestroy(): void {
     this.sub3.unsubscribe()
+    this.isDarkModeSub.unsubscribe()
   }
 }

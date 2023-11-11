@@ -37,8 +37,8 @@ mat-drawer-container {
 .header-content {
   position: fixed;
   z-index: 9999;
-
   background-color: white;
+  transition: 0.3s;
 }
 .my-app{
   cursor: pointer;
@@ -70,6 +70,54 @@ mat-drawer-container {
 .shine-button {
   animation: shine 0.4s;
   animation-fill-mode: forwards;
+}
+.dark-mode{
+  display: flex;
+  margin-right: 10px;
+}
+.light-icon{
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+.dark-icon{
+  cursor: pointer;
+  transition: 0.3s;
+}
+.light-icon:hover,
+.dark-icon:hover{
+    font-variation-settings:
+    'FILL' 10,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+.dark{
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+.dark2{
+  background-color: rgb(66, 66, 66) !important;
+  color: white !important;
+}
+.dark3{
+  color: white !important;
+}
+.dark3:hover{
+  color: white !important;
+  background-color: rgb(66, 66, 66) !important;
+}
+.dark4:hover{
+  background-color: rgb(53, 53, 53) !important;
+}
+.dark5{
+  animation: shine2 0.4s;
+  animation-fill-mode: forwards;
+}
+@keyframes shine2 {
+  50% {
+    color: #383838;
+  }
 }
 
 @media (max-width: 700px) {

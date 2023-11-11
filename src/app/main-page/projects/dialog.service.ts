@@ -18,10 +18,6 @@ export class DialogService {
   }
   openAboutMeDialog(data: any): void {
     this.dialog.open(AboutMeComponent, {
-        height: '90%',
-        maxHeight: '700px',
-        width: '90%',
-        maxWidth: '800px'
     });
   }
 }

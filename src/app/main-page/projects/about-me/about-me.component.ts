@@ -1,7 +1,9 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { SkillsComponent } from '../skills/skills.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ProjectsService } from '../../projects.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about-me',
@@ -19,16 +21,23 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit, OnDestroy {
   selectedTab1 = true
   selectedTab2 = false
   selectedTab3 = false
+  darkMode = false
+  private isDarkModeSub: Subscription
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private dialogRef: MatDialogRef<AboutMeComponent>
-  ) {}
+    private dialogRef: MatDialogRef<AboutMeComponent>, 
+    public projectsService: ProjectsService) {}
 
+  ngOnInit() {
+    this.isDarkModeSub = this.projectsService.darkMode.subscribe((res) => {
+      this.darkMode = res
+    })
+  }
   closeDialog(): void {
     this.dialogRef.close();
   }
@@ -51,6 +60,9 @@ export class AboutMeComponent {
     this.selectedTab2 = false
     this.selectedTab1 = false
     this.selectedTab3 = true
+  }
+  ngOnDestroy(): void {
+    this.isDarkModeSub.unsubscribe()
   }
 }
 

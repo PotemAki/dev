@@ -1,19 +1,19 @@
-<div class="container">
+<div class="container" [ngClass]="{dark: darkMode}">
   <div class="heading">
-    <h1>Angular
-      <span>My main projects</span>
+    <h1 [ngClass]="{dark2: darkMode}">Angular
+      <span [ngClass]="{dark3: darkMode}">My main projects</span>
     </h1>
   </div>
   <!-- project 5 -->
-  <div class="project-element">
+  <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
       <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank”>
         <img class="icon-project" src="assets/projects/posts-app.png">
       </a>
     </div>
     <div class="right-side">
-      <div class="title">Posts App</div>
-      <div class="desc">Full stack social media aplication, where we can add posts, comment them and give thumbs up. This was created on both front-end and backend.
+      <div class="title" style="margin-bottom: 10px;">Posts App</div>
+      <div class="desc" [ngClass]="{dark3: darkMode}">Full stack aplication, where we can add posts and many more. This was created on both front-end and backend.
       </div>
       <div class="tech-used-icons">
         <img class="icon" src="assets/js-icon.svg">
@@ -26,25 +26,33 @@
         <div class="footer">
           <div>
             <a href="https://github.com/PotemAki/posts-app" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/github-icon.svg">
-                <p>Code</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/github-icon.svg" 
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Code</p>
               </button>
             </a>
             
           </div>
           <div>
             <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/play-icon.svg">
-                <p>Demo</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/play-icon.svg"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/play-icon-light.svg"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Demo</p>
               </button>
             </a>
           </div>
           <div>
-            <button class="footer-button" mat-button (click)="openDialogVariant10()">
-              <img class="footer-icon" src="assets/info-icon.svg">
-              <p>Details</p>
+            <button class="footer-button" mat-button (click)="openDialogVariant10()" [ngClass]="{dark6: darkMode}">
+              <img class="footer-icon" src="assets/info-icon.png"
+              *ngIf="!darkMode">
+              <img class="footer-icon" src="assets/info-icon-light.png"
+              *ngIf="darkMode">
+              <p [ngClass]="{dark2: darkMode}">Details</p>
             </button>
           </div>
         </div>
@@ -52,7 +60,7 @@
     </div>
 </div>
   <!-- project 1 -->
-  <div class="project-element">
+  <div class="project-element" [ngClass]="{dark5: darkMode}">
       <div class="left-side">
         <a href="https://potemaki.github.io/generate-cv/generate-app#/generate" target=”_blank”>
           <img class="icon-project" src="assets/projects/generate-app.png">
@@ -60,7 +68,7 @@
       </div>
       <div class="right-side">
         <div class="title">CV Generator</div>
-        <div class="desc">Curriculum Vitae generator, that let us build application and download it in PDF. 
+        <div class="desc" [ngClass]="{dark3: darkMode}">Curriculum Vitae generator, that let us build application and download it in PDF. 
         </div>
         <div class="tech-used-icons">
           <img class="icon" src="assets/js-icon.svg">
@@ -71,26 +79,33 @@
           <div class="footer">
             <div>
               <a href="https://github.com/PotemAki/generate-cv" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <a class="info-header" href="https://github.com/PotemAki/generate-cv" target=”_blank”></a>
-                  <img class="footer-icon" src="assets/github-icon.svg">
-                  <p>Code</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/github-icon.svg" 
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Code</p>
                 </button>
               </a>
               
             </div>
             <div>
               <a href="https://potemaki.github.io/generate-cv/generate-app#/generate" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/play-icon.svg">
-                  <p>Demo</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/play-icon.svg"
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/play-icon-light.svg"
+                  *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Demo</p>
                 </button>
               </a>
             </div>
             <div>
-              <button class="footer-button" mat-button (click)="openDialogVariant1()">
-                <img class="footer-icon" src="assets/info-icon.svg">
-                <p>Details</p>
+              <button class="footer-button" mat-button (click)="openDialogVariant1()" [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/info-icon.png"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/info-icon-light.png"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Details</p>
               </button>
             </div>
           </div>
@@ -98,7 +113,7 @@
       </div>
   </div>
   <!-- project 2 -->
-  <div class="project-element">
+  <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
       <a href="https://potemaki.github.io/login-app/login-app#/auth" target="_blank">
         <img class="icon-project" src="assets/projects/login-app.png">
@@ -106,7 +121,7 @@
     </div>
     <div class="right-side">
       <div class="title">Login App</div>
-      <div class="desc">Login application with notes, that let us test out user experience.
+      <div class="desc" [ngClass]="{dark3: darkMode}">Login application with notes, that let us test out user experience.
       </div>
       <div class="tech-used-icons">
         <img class="icon" src="assets/js-icon.svg">
@@ -118,24 +133,32 @@
         <div class="footer">
           <div>
             <a href="https://github.com/PotemAki/login-app" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/github-icon.svg">
-                <p>Code</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/github-icon.svg" 
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Code</p>
               </button>
             </a>
           </div>
           <div>
             <a href="https://potemaki.github.io/login-app/login-app#/auth" target="_blank">
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/play-icon.svg">
-                <p>Demo</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/play-icon.svg"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/play-icon-light.svg"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Demo</p>
               </button>
             </a>
           </div>
           <div>
-            <button class="footer-button" mat-button (click)="openDialogVariant2()">
-              <img class="footer-icon" src="assets/info-icon.svg">
-              <p>Details</p>
+            <button class="footer-button" mat-button (click)="openDialogVariant2()" [ngClass]="{dark6: darkMode}">
+              <img class="footer-icon" src="assets/info-icon.png"
+              *ngIf="!darkMode">
+              <img class="footer-icon" src="assets/info-icon-light.png"
+              *ngIf="darkMode">
+              <p [ngClass]="{dark2: darkMode}">Details</p>
             </button>
           </div>
         </div>
@@ -143,7 +166,7 @@
     </div>
   </div>
   <!-- project 3 -->
-  <div class="project-element">
+  <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
       <a href="https://potemaki.github.io/todo-app/" target=”_blank”>
         <img class="icon-project" src="assets/projects/todo-app.png">
@@ -151,7 +174,7 @@
     </div>
     <div class="right-side">
       <div class="title">ToDo List App</div>
-      <div class="desc">A simple ToDo List.
+      <div class="desc" [ngClass]="{dark3: darkMode}">A simple ToDo List.
       </div>
       <div class="tech-used-icons">
         <img class="icon" src="assets/js-icon.svg">
@@ -162,24 +185,32 @@
         <div class="footer">
           <div>
             <a href="https://github.com/PotemAki/todo-app" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/github-icon.svg">
-                <p>Code</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/github-icon.svg" 
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Code</p>
               </button>
             </a>
           </div>
           <div>
             <a href="https://potemaki.github.io/todo-app/" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/play-icon.svg">
-                <p>Demo</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/play-icon.svg"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/play-icon-light.svg"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Demo</p>
               </button>
             </a>
           </div>
           <div>
-            <button class="footer-button" mat-button (click)="openDialogVariant3()">
-              <img class="footer-icon" src="assets/info-icon.svg">
-              <p>Details</p>
+            <button class="footer-button" mat-button (click)="openDialogVariant3()" [ngClass]="{dark6: darkMode}">
+              <img class="footer-icon" src="assets/info-icon.png"
+              *ngIf="!darkMode">
+              <img class="footer-icon" src="assets/info-icon-light.png"
+              *ngIf="darkMode">
+              <p [ngClass]="{dark2: darkMode}">Details</p>
             </button>
           </div>
         </div>
@@ -187,7 +218,7 @@
     </div>
   </div>
   <!-- project 4 -->
-  <div class="project-element">
+  <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
       <a href="https://potemaki.github.io/weather-app/" target=”_blank”>
         <img class="icon-project" src="assets/projects/weather-app.png">
@@ -195,7 +226,7 @@
     </div>
     <div class="right-side">
       <div class="title">Weather App</div>
-      <div class="desc">A simple Weather App, that let us check temperature in cites around the world.
+      <div class="desc" [ngClass]="{dark3: darkMode}">A simple Weather App, that let us check temperature in cites around the world.
       </div>
       <div class="tech-used-icons">
         <img class="icon" src="assets/js-icon.svg">
@@ -206,24 +237,32 @@
         <div class="footer">
           <div>
             <a href="https://github.com/PotemAki/weather-app" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/github-icon.svg">
-                <p>Code</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/github-icon.svg" 
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Code</p>
               </button>
             </a>
           </div>
           <div>
             <a href="https://potemaki.github.io/weather-app/" target=”_blank”>
-              <button class="footer-button" mat-button>
-                <img class="footer-icon" src="assets/play-icon.svg">
-                <p>Demo</p>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/play-icon.svg"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/play-icon-light.svg"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Demo</p>
               </button>
             </a>
           </div>
           <div>
-            <button class="footer-button" mat-button (click)="openDialogVariant4()">
-              <img class="footer-icon" src="assets/info-icon.svg">
-              <p>Details</p>
+            <button class="footer-button" mat-button (click)="openDialogVariant4()" [ngClass]="{dark6: darkMode}">
+              <img class="footer-icon" src="assets/info-icon.png"
+              *ngIf="!darkMode">
+              <img class="footer-icon" src="assets/info-icon-light.png"
+              *ngIf="darkMode">
+              <p [ngClass]="{dark2: darkMode}">Details</p>
             </button>
           </div>
         </div>
@@ -232,13 +271,13 @@
   </div>
   <hr #appJSProjects>
   <div class="heading" >
-    <h1>JavaScript
-      <span>Smaller Projects</span>
+    <h1 [ngClass]="{dark2: darkMode}">JavaScript
+      <span [ngClass]="{dark3: darkMode}">Smaller Projects</span>
     </h1>
   </div>
   <div class="one-row-js">
     <!-- project JS 1 -->
-    <div class="project-element-js">
+    <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
         <a href="https://potemaki.github.io/Rock-Paper-Scissors/" target=”_blank”>
           <img class="icon-project" src="assets/projects/js-rock-papper-scissors.png">
@@ -246,7 +285,7 @@
       </div>
       <div class="right-side-js">
         <div class="title">Rock Paper Scissors</div>
-        <div class="desc">Let us play Rock Paper Scissors game.
+        <div class="desc" [ngClass]="{dark3: darkMode}">Let us play Rock Paper Scissors game.
         </div>
         <div class="tech-used-icons">
           <img class="icon" src="assets/js-icon.svg">
@@ -257,24 +296,32 @@
           <div class="footer">
             <div>
               <a href="https://github.com/PotemAki/Rock-Paper-Scissors" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/github-icon.svg">
-                  <p>Code</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/github-icon.svg" 
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Code</p>
                 </button>
               </a>
             </div>
             <div>
               <a href="https://potemaki.github.io/Rock-Paper-Scissors/" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/play-icon.svg">
-                  <p>Demo</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/play-icon.svg"
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/play-icon-light.svg"
+                  *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Demo</p>
                 </button>
               </a>
             </div>
             <div>
-              <button class="footer-button" mat-button (click)="openDialogVariant5()">
-                <img class="footer-icon" src="assets/info-icon.svg">
-                <p>Details</p>
+              <button class="footer-button" mat-button (click)="openDialogVariant5()" [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/info-icon.png"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/info-icon-light.png"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Details</p>
               </button>
             </div>
           </div>
@@ -282,7 +329,7 @@
       </div>
     </div>
     <!-- project JS 2 -->
-    <div class="project-element-js">
+    <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
         <a href="https://potemaki.github.io/Calculator/" target=”_blank”>
           <img class="icon-project" src="assets/projects/js-calculator.png">
@@ -290,7 +337,7 @@
       </div>
       <div class="right-side-js">
         <div class="title">Calculator</div>
-        <div class="desc">Basic calculator.
+        <div class="desc" [ngClass]="{dark3: darkMode}">Basic calculator.
         </div>
         <div class="tech-used-icons">
           <img class="icon" src="assets/js-icon.svg">
@@ -301,24 +348,32 @@
           <div class="footer">
             <div>
               <a href="https://github.com/PotemAki/Calculator" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/github-icon.svg">
-                  <p>Code</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/github-icon.svg" 
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Code</p>
                 </button>
               </a>
             </div>
             <div>
               <a href="https://potemaki.github.io/Calculator/" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/play-icon.svg">
-                  <p>Demo</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/play-icon.svg"
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/play-icon-light.svg"
+                  *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Demo</p>
                 </button>
               </a>
             </div>
             <div>
-              <button class="footer-button" mat-button (click)="openDialogVariant6()">
-                <img class="footer-icon" src="assets/info-icon.svg">
-                <p>Details</p>
+              <button class="footer-button" mat-button (click)="openDialogVariant6()" [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/info-icon.png"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/info-icon-light.png"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Details</p>
               </button>
             </div>
           </div>
@@ -328,7 +383,7 @@
   </div>
   <div class="one-row-js">
     <!-- project JS 3 -->
-    <div class="project-element-js">
+    <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
         <a href="https://potemaki.github.io/Convert-Values/" target=”_blank”>
           <img class="icon-project" src="assets/projects/js-convert.png">
@@ -336,7 +391,7 @@
       </div>
       <div class="right-side-js">
         <div class="title">Convert-Values</div>
-        <div class="desc">Convert inputed values.
+        <div class="desc" [ngClass]="{dark3: darkMode}">Convert inputed values.
         </div>
         <div class="tech-used-icons">
           <img class="icon" src="assets/js-icon.svg">
@@ -347,24 +402,32 @@
           <div class="footer">
             <div>
               <a href="https://github.com/PotemAki/Convert-Values" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/github-icon.svg">
-                  <p>Code</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/github-icon.svg" 
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Code</p>
                 </button>
               </a>
             </div>
             <div>
               <a href="https://potemaki.github.io/Convert-Values/" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/play-icon.svg">
-                  <p>Demo</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/play-icon.svg"
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/play-icon-light.svg"
+                  *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Demo</p>
                 </button>
               </a>
             </div>
             <div>
-              <button class="footer-button" mat-button (click)="openDialogVariant7()">
-                <img class="footer-icon" src="assets/info-icon.svg">
-                <p>Details</p>
+              <button class="footer-button" mat-button (click)="openDialogVariant7()" [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/info-icon.png"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/info-icon-light.png"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Details</p>
               </button>
             </div>
           </div>
@@ -372,7 +435,7 @@
       </div>
     </div>
     <!-- project JS 4 -->
-    <div class="project-element-js">
+    <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
         <a href="https://potemaki.github.io/StopWatch/" target=”_blank”>
           <img class="icon-project" src="assets/projects/js-stopwatch.png">
@@ -380,7 +443,7 @@
       </div>
       <div class="right-side-js">
         <div class="title">StopWatch</div>
-        <div class="desc">Measure the time.
+        <div class="desc" [ngClass]="{dark3: darkMode}">Measure the time.
         </div>
         <div class="tech-used-icons">
           <img class="icon" src="assets/js-icon.svg">
@@ -391,24 +454,32 @@
           <div class="footer">
             <div>
               <a href="https://github.com/PotemAki/StopWatch" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/github-icon.svg">
-                  <p>Code</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/github-icon.svg" 
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Code</p>
                 </button>
               </a>
             </div>
             <div>
               <a href="https://potemaki.github.io/StopWatch/" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/play-icon.svg">
-                  <p>Demo</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/play-icon.svg"
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/play-icon-light.svg"
+                  *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Demo</p>
                 </button>
               </a>
             </div>
             <div>
-              <button class="footer-button" mat-button (click)="openDialogVariant8()">
-                <img class="footer-icon" src="assets/info-icon.svg">
-                <p>Details</p>
+              <button class="footer-button" mat-button (click)="openDialogVariant8()" [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/info-icon.png"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/info-icon-light.png"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Details</p>
               </button>
             </div>
           </div>
@@ -418,7 +489,7 @@
   </div>
   <div class="one-row-js">
     <!-- project JS 5 -->
-    <div class="project-element-js">
+    <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
         <a href="https://potemaki.github.io/GenerateColor/" target=”_blank”>
           <img class="icon-project" src="assets/projects/js-generate-color.png">
@@ -426,7 +497,7 @@
       </div>
       <div class="right-side-js">
         <div class="title">Color Generator</div>
-        <div class="desc">Let us generate random color.
+        <div class="desc" [ngClass]="{dark3: darkMode}">Let us generate random color.
         </div>
         <div class="tech-used-icons">
           <img class="icon" src="assets/js-icon.svg">
@@ -437,24 +508,32 @@
           <div class="footer">
             <div>
               <a href="https://github.com/PotemAki/GenerateColor" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/github-icon.svg">
-                  <p>Code</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/github-icon.svg" 
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Code</p>
                 </button>
               </a>
             </div>
             <div>
               <a href="https://potemaki.github.io/GenerateColor/" target=”_blank”>
-                <button class="footer-button" mat-button>
-                  <img class="footer-icon" src="assets/play-icon.svg">
-                  <p>Demo</p>
+                <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                  <img class="footer-icon" src="assets/play-icon.svg"
+                  *ngIf="!darkMode">
+                  <img class="footer-icon" src="assets/play-icon-light.svg"
+                  *ngIf="darkMode">
+                  <p [ngClass]="{dark2: darkMode}">Demo</p>
                 </button>
               </a>
             </div>
             <div>
-              <button class="footer-button" mat-button (click)="openDialogVariant9()">
-                <img class="footer-icon" src="assets/info-icon.svg">
-                <p>Details</p>
+              <button class="footer-button" mat-button (click)="openDialogVariant9()" [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/info-icon.png"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/info-icon-light.png"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Details</p>
               </button>
             </div>
           </div>
