@@ -89,9 +89,6 @@
 .footer-icon{
   width: 40px;
 }
-.footer-icon2{
-  width: 35px;
-}
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -174,7 +171,7 @@
     width: 50%;
   }
   .skill-set{
-    height: 120%;
+    height: 110% !important;
   }
   .footer{
     margin-top: 20px;
