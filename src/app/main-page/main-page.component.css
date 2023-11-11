@@ -172,9 +172,10 @@
   }
   .skill-set{
     height: 110% !important;
+    margin-top: -10px;
   }
   .footer{
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .header-title{
     font-size: 33px;
