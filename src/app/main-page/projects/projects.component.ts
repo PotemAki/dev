@@ -59,14 +59,14 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine4: `Weather App: Using an API server, we can check the current time and weather conditions across different cities.`
     });
   }
-  // openDialogVariant4() {
-  //   this.dialogService.openDialog({
-  //     title: 'A simple Weather App',
-  //     contentLine1: `App sends http request to API server, that's live database of weather conditions,`,
-  //     contentLine2: `We can search cities and check current time, weather, humidity and wind,`,
-  //     contentLine3: `App look will change depending on weather and day/night time.`,
-  //   });
-  // }
+  openDialogVariant4() {
+    this.dialogService.openDialog({
+      title: 'Bookmarks Demo Project',
+      contentLine1: `Professional and user-friendly design,`,
+      contentLine2: `Pop-up modal after 30s on page, footer info about members gradually going down to 0,`,
+      contentLine3: `Sidebar when on a smaller screen.`,
+    });
+  }
   openDialogVariant5() {
     this.dialogService.openDialog({
       title: 'Rock Paper Scissors',

@@ -24,6 +24,7 @@ import { SkillsComponent } from './main-page/projects/skills/skills.component';
 import { AboutMeComponent } from './main-page/projects/about-me/about-me.component';
 import { CvComponent } from './cv/cv.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     AboutMeComponent,
     CvComponent,
     NotFoundPageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

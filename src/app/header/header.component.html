@@ -8,7 +8,7 @@
     </div>
     <div class="inside-sidenav_2">
       <button class="nav-button2" mat-raised-button (click)="onProjects()"
-      [ngClass]="{dark2: darkMode}">Angular Projects</button>
+      [ngClass]="{dark2: darkMode}">Main Projects</button>
       <button class="nav-button2" mat-raised-button (click)="onJSProjects()"
       [ngClass]="{dark2: darkMode}">JavaScript Projects</button>
     </div>
@@ -26,7 +26,7 @@
     <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="my-app shine-button" routerLink="/" [ngClass]="{dark5: darkMode}">Michał.dev</span>
+    <span class="my-app shine-button" routerLink="/" [ngClass]="{dark5: darkMode}" (click)="onHome()">Michał.dev</span>
     <span class="spacer"></span>
     <div class="dark-mode" *ngIf="!darkMode">
       <span class="material-symbols-outlined dark-icon" (click)="toDarkMode()">
@@ -52,5 +52,6 @@
   <!-- rest of the page -->
   <div class="page">
     <router-outlet></router-outlet>
+    <app-footer></app-footer>
   </div>
 </mat-drawer-container>

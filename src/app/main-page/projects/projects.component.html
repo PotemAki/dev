@@ -1,6 +1,63 @@
 <div class="container" [ngClass]="{dark: darkMode}">
   <div class="heading">
-    <h1 [ngClass]="{dark2: darkMode}">Angular
+    <h1 [ngClass]="{dark2: darkMode}">React <img class="icon" src="assets/react-icon.svg">
+      <span [ngClass]="{dark3: darkMode}">First project</span>
+    </h1>
+  </div>
+  <!-- project react 1 -->
+  <div class="project-element" [ngClass]="{dark5: darkMode}">
+    <div class="left-side">
+      <a href="https://potemaki.github.io/bookmarks-project/" target=”_blank”>
+        <img class="icon-project" src="assets/projects/react-bookmarks.png">
+      </a>
+    </div>
+    <div class="right-side">
+      <div class="title" style="margin-bottom: 10px;">Bookmarks Project</div>
+      <div class="desc" [ngClass]="{dark3: darkMode}">My latest creation in React: currently a visual showcase, a project that lays the foundation for a seamless and intuitive user experience.
+      </div>
+      <div class="tech-used-icons">
+        <img class="icon" src="assets/js-icon.svg">
+        <img class="icon" src="assets/react-icon.svg">
+      </div>
+      <div class="links">
+        <div class="footer">
+          <div>
+            <a href="https://github.com/PotemAki/bookmarks-project/tree/master?tab=readme-ov-file" target=”_blank”>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/github-icon.svg" 
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/github-icon-light.svg" *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Code</p>
+              </button>
+            </a>
+            
+          </div>
+          <div>
+            <a href="https://potemaki.github.io/bookmarks-project/" target=”_blank”>
+              <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
+                <img class="footer-icon" src="assets/play-icon.svg"
+                *ngIf="!darkMode">
+                <img class="footer-icon" src="assets/play-icon-light.svg"
+                *ngIf="darkMode">
+                <p [ngClass]="{dark2: darkMode}">Demo</p>
+              </button>
+            </a>
+          </div>
+          <div>
+            <button class="footer-button" mat-button (click)="openDialogVariant4()" [ngClass]="{dark6: darkMode}">
+              <img class="footer-icon" src="assets/info-icon.png"
+              *ngIf="!darkMode">
+              <img class="footer-icon" src="assets/info-icon-light.png"
+              *ngIf="darkMode">
+              <p [ngClass]="{dark2: darkMode}">Details</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  <div class="heading">
+    <h1 [ngClass]="{dark2: darkMode}">Angular <img class="icon" src="assets/angular-icon.svg">
       <span [ngClass]="{dark3: darkMode}">My main projects</span>
     </h1>
   </div>
@@ -8,7 +65,7 @@
   <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
       <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank”>
-        <img class="icon-project" src="assets/projects/posts-app.png">
+        <img class="icon-project" src="assets/projects/posts-app2.png">
       </a>
     </div>
     <div class="right-side">
@@ -220,7 +277,7 @@
   </div>
   <div #appJSProjects></div>
   <div class="heading" >
-    <h1 [ngClass]="{dark2: darkMode}">JavaScript
+    <h1 [ngClass]="{dark2: darkMode}">JavaScript <img class="icon" src="assets/js-icon.svg">
       <span [ngClass]="{dark3: darkMode}">Smaller Projects</span>
     </h1>
   </div>
