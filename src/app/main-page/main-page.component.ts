@@ -4,6 +4,8 @@ import { ProjectsService } from './projects.service';
 import { Subscription } from 'rxjs';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
+declare let gtag: Function;
+
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
@@ -57,13 +59,23 @@ export class MainPageComponent implements OnInit, OnDestroy{
   }
   openAboutMe() {
     this.dialogService.openAboutMeDialog({});
+    this.trackOutboundLink('dialog-aboutme')
   }
   openSkillsInfo() {
     this.dialogService.openSkillsDialog({});
+    this.trackOutboundLink('dialog-skills')
   }
   scroll(el: HTMLElement) {
     el.scrollIntoView({behavior: 'smooth'});
   }
+
+  trackOutboundLink(label: string) {
+    // Send an event to Google Analytics
+    gtag('event', 'click', {
+       event_category: 'Outbound Link',
+       event_label: label,
+    });
+ }
   ngOnDestroy(){
     this.sub1.unsubscribe()
     this.sub2.unsubscribe()

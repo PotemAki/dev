@@ -22,7 +22,7 @@
       <div class="links">
         <div class="footer">
           <div>
-            <a href="https://github.com/PotemAki/bookmarks-project/tree/master?tab=readme-ov-file" target=”_blank”>
+            <a href="https://github.com/PotemAki/bookmarks-project/tree/master?tab=readme-ov-file" target=”_blank” (click)="trackOutboundLink('bookmarks-git')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/github-icon.svg" 
                 *ngIf="!darkMode">
@@ -33,7 +33,7 @@
             
           </div>
           <div>
-            <a href="https://potemaki.github.io/bookmarks-project/" target=”_blank”>
+            <a href="https://potemaki.github.io/bookmarks-project/" target=”_blank” (click)="trackOutboundLink('bookmarks-link')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/play-icon.svg"
                 *ngIf="!darkMode">
@@ -64,7 +64,7 @@
   <!-- project 3 -->
   <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
-      <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank”>
+      <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank” (click)="trackOutboundLink('posts-link')">
         <img class="icon-project" src="assets/projects/posts-app2.png">
       </a>
     </div>
@@ -82,7 +82,7 @@
       <div class="links">
         <div class="footer">
           <div>
-            <a href="https://github.com/PotemAki/posts-app" target=”_blank”>
+            <a href="https://github.com/PotemAki/posts-app" target=”_blank” (click)="trackOutboundLink('posts-code')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/github-icon.svg" 
                 *ngIf="!darkMode">
@@ -93,7 +93,8 @@
             
           </div>
           <div>
-            <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank”>
+            <a href="http://potemaki.s3-website.eu-north-1.amazonaws.com" target=”_blank” 
+            (click)="trackOutboundLink('posts-link')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/play-icon.svg"
                 *ngIf="!darkMode">
@@ -119,7 +120,7 @@
   <!-- project 4 -->
   <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
-      <a href="https://potemaki.github.io/apps/todo" target=”_blank”>
+      <a href="https://potemaki.github.io/apps/todo" target=”_blank” (click)="trackOutboundLink('apps-link')">
         <img class="icon-project" src="assets/projects/apps-app.png">
       </a>
     </div>
@@ -135,7 +136,7 @@
       <div class="links">
         <div class="footer">
           <div>
-            <a href="https://github.com/PotemAki/apps" target=”_blank”>
+            <a href="https://github.com/PotemAki/apps" target=”_blank” (click)="trackOutboundLink('apps-link')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/github-icon.svg" 
                 *ngIf="!darkMode">
@@ -146,7 +147,7 @@
             
           </div>
           <div>
-            <a href="https://potemaki.github.io/apps/todo" target=”_blank”>
+            <a href="https://potemaki.github.io/apps/todo" target=”_blank” (click)="trackOutboundLink('apps-link')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/play-icon.svg"
                 *ngIf="!darkMode">
@@ -172,7 +173,7 @@
   <!-- project 1 -->
   <div class="project-element" [ngClass]="{dark5: darkMode}">
       <div class="left-side">
-        <a href="https://potemaki.github.io/generate-cv" target=”_blank”>
+        <a href="https://potemaki.github.io/generate-cv" target=”_blank” (click)="trackOutboundLink('generate-link')">
           <img class="icon-project" src="assets/projects/generate-app.png">
         </a>
       </div>
@@ -188,7 +189,7 @@
         <div class="links">
           <div class="footer">
             <div>
-              <a href="https://github.com/PotemAki/generate-cv" target=”_blank”>
+              <a href="https://github.com/PotemAki/generate-cv" target=”_blank” (click)="trackOutboundLink('generate-code')">
                 <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                   <img class="footer-icon" src="assets/github-icon.svg" 
                   *ngIf="!darkMode">
@@ -199,7 +200,8 @@
               
             </div>
             <div>
-              <a href="https://potemaki.github.io/generate-cv" target=”_blank”>
+              <a href="https://potemaki.github.io/generate-cv" target=”_blank” 
+              (click)="trackOutboundLink('generate-link')">
                 <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                   <img class="footer-icon" src="assets/play-icon.svg"
                   *ngIf="!darkMode">
@@ -225,7 +227,7 @@
   <!-- project 2 -->
   <div class="project-element" [ngClass]="{dark5: darkMode}">
     <div class="left-side">
-      <a href="https://potemaki.github.io/login-app/login-app#/auth" target="_blank">
+      <a href="https://potemaki.github.io/login-app/login-app#/auth" target="_blank" (click)="trackOutboundLink('generate-link')">
         <img class="icon-project" src="assets/projects/login-app.png">
       </a>
     </div>
@@ -242,7 +244,7 @@
       <div class="links">
         <div class="footer">
           <div>
-            <a href="https://github.com/PotemAki/login-app" target=”_blank”>
+            <a href="https://github.com/PotemAki/login-app" target=”_blank” (click)="trackOutboundLink('generate-code')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/github-icon.svg" 
                 *ngIf="!darkMode">
@@ -252,7 +254,8 @@
             </a>
           </div>
           <div>
-            <a href="https://potemaki.github.io/login-app/login-app#/auth" target="_blank">
+            <a href="https://potemaki.github.io/login-app/login-app#/auth" target="_blank" 
+            (click)="trackOutboundLink('generate-link')">
               <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                 <img class="footer-icon" src="assets/play-icon.svg"
                 *ngIf="!darkMode">
@@ -285,7 +288,7 @@
     <!-- project JS 1 -->
     <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
-        <a href="https://potemaki.github.io/Rock-Paper-Scissors/" target=”_blank”>
+        <a href="https://potemaki.github.io/Rock-Paper-Scissors/" target=”_blank” (click)="trackOutboundLink('RockPaperScissors-link')">
           <img class="icon-project" src="assets/projects/js-rock-papper-scissors.png">
         </a>
       </div>
@@ -311,7 +314,8 @@
               </a>
             </div>
             <div>
-              <a href="https://potemaki.github.io/Rock-Paper-Scissors/" target=”_blank”>
+              <a href="https://potemaki.github.io/Rock-Paper-Scissors/" target=”_blank” 
+              (click)="trackOutboundLink('RockPaperScissors-link')">
                 <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                   <img class="footer-icon" src="assets/play-icon.svg"
                   *ngIf="!darkMode">
@@ -337,7 +341,7 @@
     <!-- project JS 2 -->
     <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
-        <a href="https://potemaki.github.io/Calculator/" target=”_blank”>
+        <a href="https://potemaki.github.io/Calculator/" target=”_blank” (click)="trackOutboundLink('calculator-link')">
           <img class="icon-project" src="assets/projects/js-calculator.png">
         </a>
       </div>
@@ -363,7 +367,8 @@
               </a>
             </div>
             <div>
-              <a href="https://potemaki.github.io/Calculator/" target=”_blank”>
+              <a href="https://potemaki.github.io/Calculator/" target=”_blank” 
+              (click)="trackOutboundLink('calculator-link')">
                 <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                   <img class="footer-icon" src="assets/play-icon.svg"
                   *ngIf="!darkMode">
@@ -391,7 +396,7 @@
     <!-- project JS 4 -->
     <div class="project-element-js" [ngClass]="{dark5: darkMode}">
       <div class="left-side-js">
-        <a href="https://potemaki.github.io/StopWatch/" target=”_blank”>
+        <a href="https://potemaki.github.io/StopWatch/" target=”_blank” (click)="trackOutboundLink('stopwatch-link')">
           <img class="icon-project" src="assets/projects/js-stopwatch.png">
         </a>
       </div>
@@ -417,7 +422,7 @@
               </a>
             </div>
             <div>
-              <a href="https://potemaki.github.io/StopWatch/" target=”_blank”>
+              <a href="https://potemaki.github.io/StopWatch/" target=”_blank” (click)="trackOutboundLink('stopwatch-link')">
                 <button class="footer-button" mat-button [ngClass]="{dark6: darkMode}">
                   <img class="footer-icon" src="assets/play-icon.svg"
                   *ngIf="!darkMode">

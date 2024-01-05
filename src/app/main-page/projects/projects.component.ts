@@ -40,6 +40,7 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine5: `We can input a link to our portfolio and give that link a specific name.`,
       contentLine6: `We can download our CV in PDF format (the link to the portfolio still works) - this is recommended on desktop.`
     });
+    this.trackOutboundLink('generate-desc')
   }
   openDialogVariant2() {
     this.dialogService.openDialog({
@@ -51,6 +52,7 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine5: `We can log in and then edit our details: display name and password.`,
       contentLine6: `We can create notes that are assigned to our account.`
     });
+    this.trackOutboundLink('login-desc')
   }
   openDialogVariant3() {
     this.dialogService.openDialog({
@@ -60,6 +62,7 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine3: `Mini Apps: We can dynamically transfer multiple value units or generate random colors for our use.`,
       contentLine4: `Weather App: Using an API server, we can check the current time and weather conditions across different cities.`
     });
+    this.trackOutboundLink('apps-desc')
   }
   openDialogVariant4() {
     this.dialogService.openDialog({
@@ -68,6 +71,7 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine2: `Pop-up modal after 30s on page, footer info about members gradually going down to 0,`,
       contentLine3: `Sidebar when on a smaller screen.`,
     });
+    this.trackOutboundLink('bookmarks-desc')
   }
   openDialogVariant5() {
     this.dialogService.openDialog({
@@ -102,6 +106,7 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine5: `We can edit our account: change nickname, password, or profile picture.`,
       contentLine6: `The app uses AWE hosting service as GitHub doesn't support backend hosting.`
     });
+    this.trackOutboundLink('posts-desc')
   }
   
   trackOutboundLink(label: string) {
