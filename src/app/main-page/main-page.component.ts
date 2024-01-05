@@ -28,14 +28,14 @@ declare let gtag: Function;
     trigger('slideSide3', [
       state('in', style({ transform: 'translateX(0)' })),
       transition('void => *', [
-        style({ transform: 'translateX(-500%)' }),
+        style({ transform: 'translateX(-1000%)' }),
         animate('300ms ease-in')
       ]),
     ]),
     trigger('slideSide4', [
       state('in', style({ transform: 'translateX(0)' })),
       transition('void => *', [
-        style({ transform: 'translateX(-500%)' }),
+        style({ transform: 'translateX(-1000%)' }),
         animate('350ms ease-in')
       ]),
     ]),
