@@ -3,6 +3,8 @@ import { DialogService } from './dialog.service';
 import { Subscription } from 'rxjs';
 import { ProjectsService } from '../projects.service';
 
+declare let gtag: Function;
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -102,6 +104,13 @@ export class ProjectsComponent implements OnInit, OnDestroy{
     });
   }
   
+  trackOutboundLink(label: string) {
+    // Send an event to Google Analytics
+    gtag('event', 'click', {
+       event_category: 'Outbound Link',
+       event_label: label,
+    });
+ }
 
   ngOnDestroy(): void {
     this.sub3.unsubscribe()
