@@ -18,6 +18,7 @@ export class DialogService {
   }
   openAboutMeDialog(data: any): void {
     this.dialog.open(AboutMeComponent, {
+      width: '1000px'
     });
   }
 }

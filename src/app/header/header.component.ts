@@ -30,6 +30,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   onProjects() {
     this.router.navigate(['/'])
     this.projectsService.navigateProjects.next()
+    
   }
   onJSProjects() {
     this.router.navigate(['/'])
