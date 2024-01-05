@@ -25,6 +25,20 @@ declare let gtag: Function;
         animate('600ms ease-in')
       ]),
     ]),
+    trigger('slideSide3', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-500%)' }),
+        animate('300ms ease-in')
+      ]),
+    ]),
+    trigger('slideSide4', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(-500%)' }),
+        animate('350ms ease-in')
+      ]),
+    ]),
     trigger('fadeInOut', [
       state('void', style({ opacity: 0 })),
       transition('void => *', [

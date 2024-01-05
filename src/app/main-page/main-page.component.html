@@ -4,8 +4,8 @@
       <h1 [@slideSide1] class="header-title">Front-End Angular Developer</h1>
       <p [@slideSide2] class="subtext" [ngClass]="{dark2: darkMode}">Passionate developer dedicated to creating awesome web experiences.</p>
     </div>
-    <div [@fadeInOut] class="footer">
-      <div>
+    <div  class="footer">
+      <div [@slideSide4] >
         <a href="https://github.com/PotemAki" target=”_blank”>
           <button class="footer-button shine-button" mat-button 
           [ngClass]="{dark3: darkMode}">
@@ -15,7 +15,7 @@
           </button>
         </a>
       </div>
-      <div>
+      <div [@slideSide3] >
         <button class="footer-button shine-button" mat-button 
         [ngClass]="{dark3: darkMode}"
         (click)="openAboutMe()">
