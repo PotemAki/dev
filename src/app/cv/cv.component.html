@@ -1,96 +1,152 @@
-<div class="body-cv" [ngClass]="{dark: darkMode}">
-  <div class="container" [ngClass]="{dark3: darkMode}">
-      <header [ngClass]="{dark2: darkMode}">
-        <div class="left-side">
-          <!-- <img class="cv-icon" src="assets/cv.png"width="100px"/> -->
-          <div>
-          <h1 class="name">Michał Matyka</h1>
-          <span [ngClass]="{dark4: darkMode}">Configuration Analyst</span>
+<div class="container" [ngClass]="{dark: darkMode}">
+  <div class="body-cv" [ngClass]="{dark3: darkMode}">
+    <div class="header" [ngClass]="{dark2: darkMode}">
+      <div class="left-side">
+        <!-- <img class="cv-icon" src="assets/cv.png"width="100px"/> -->
+        <div>
+          <div class="name">Michał Matyka</div>
+          <div class="job-title" [ngClass]="{dark4: darkMode}">Configuration Analyst
           </div>
         </div>
-        <address>
-            <div class="address-details">
-                <p><b><img class="address-icon" src="assets/phone icon.png"/>Phone:</b> 698246089</p>
-                <p><b><img class="address-icon" src="assets/email icon.png"/>Email:</b> michalmatyka194@gmail.com</p>
-                <p><b><img class="address-icon" src="assets/birth icon.png"/>Date of birth:</b> 16-06-1994</p>
-                <p><b><img class="address-icon" src="assets/home icon.png"/>Home:</b> Kraków</p>
+      </div>
+      <div class="right-side">
+        <div class="address-details">
+          <div class="address-line">
+            <div class="address-left">
+              <img class="address-icon" src="assets/phone icon.png"/>
+              <div><b>Phone:</b></div>
             </div>
-        </address>
-      </header>
-      <main >
-          <section [ngClass]="{dark2: darkMode}">
-              <h2>About me</h2>
-              <p [ngClass]="{dark4: darkMode}">
-                I have 9 months of experience in project-related work, 1 year and 4 months in data, and 3 years of experience in customer service. I appreciate the opportunity to apply my previous experience in a new work environment. Opportunity to develop and learn new competences is crucial for me. But, most importantly, I really want to enjoy what I do.
-                This is why i decided to start coding.
-              </p>
-      
-          </section>
-          <section class="title" [ngClass]="{dark2: darkMode}">
-              <h2><img class="section-icon" src="assets/education-icon.png"/>Education</h2>
-              <ul>
-                  <li class="title-sec"><b>Bachelor in Management</b></li>
-                  <ul [ngClass]="{dark4: darkMode}"><li>
-                    State Higher Vocational College Memorial of 
-                      Prof. Stanislaw Tarnowski in Tarnobrzeg</li></ul>
-                  <li class="title-sec"><b>Other development</b></li> 
-                      <ul [ngClass]="{dark4: darkMode}">
-                      <li>Angular</li>
-                      <li>JavaScript/TypeScript, HTML, CSS</li>
-                      <li>Full MEAN Stack; MongoDB, Express, NodeJS and SQL</li>
-                      <li>Testing applications</li>
-                      </ul>
+            <div>
+              698246089
+            </div>
+          </div>
+          <div class="address-line">
+            <div class="address-left">
+              <img class="address-icon" src="assets/email icon.png"/>
+              <div><b>Email:</b></div>
+            </div>
+            <div>
+              michalmatyka194@gmail.com
+            </div>
+          </div>
+          <div class="address-line">
+            <div class="address-left">
+              <img class="address-icon" src="assets/birth icon.png"/>
+              <div><b>DOB:</b></div>
+            </div>
+            <div>
+              16-06-1994
+            </div>
+          </div>
+          <div class="address-line">
+            <div class="address-left">
+              <img class="address-icon" src="assets/home icon.png"/>
+              <div><b>Home:</b></div>
+            </div>
+            <div>
+              Kraków
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-me" [ngClass]="{dark2: darkMode}">
+      <div class="about-title">About Me</div>
+      <div class="about-desc" [ngClass]="{dark4: darkMode}">I have 9 months of experience in project-related work, 1 year and 4 months in data, and 3 years of experience in customer service. I appreciate the opportunity to apply my previous experience in a new work environment. Opportunity to develop and learn new competences is crucial for me. But, most importantly, I really want to enjoy what I do. This is why i decided to start coding.</div>
+    </div>
+    <div class="main" [ngClass]="{dark2: darkMode}">
+      <div>
+        <div class="section-title">
+          <img class="section-icon" src="assets/education-icon.png"/>
+          <div>Education</div>
+        </div>
+        <div>
+          <ul>
+            <li class="subsec-title">Bachelor in Management</li>
+              <ul class="subsec-desc" [ngClass]="{dark4: darkMode}">
+                <li>
+                State Higher Vocational College Memorial of 
+                Prof. Stanislaw Tarnowski in Tarnobrzeg
+                </li>
               </ul>
-          </section>
-          <section class="title" [ngClass]="{dark2: darkMode}">
-              <h2><img class="section-icon" src="assets/work-icon.png"/>Work Experience</h2>
-              <ul>
-                  <li class="title-sec"><b>Customer Service</b> (2019-09 - 2021-11)</li>
-                      <i><b>Lotos,</b> Tarnobrzeg</i>
-                  <li class="title-sec"><b>Pensions Administrator Entry </b>(2021-12 - 2023-03),</li>
-                      <i><b>Aon,</b> Kraków</i>
-                      <ul [ngClass]="{dark4: darkMode}"><li>processing scheme members requests in line with agreed deadlines,</li>
-                      <li>preparing requested documentation in line with GDPR,</li>
-                      <li>extracting data reports from SQL data base.</li>
-                      </ul>
-                  <li class="title-sec"><b>GBS Configuration Analyst </b>(2023-04 - now),</li>
-                      <i><b>Aon,</b> Kraków</i>
-                      <ul [ngClass]="{dark4: darkMode}"><li>Implementing website in the internal environment accordingly to documentation,</li>
-                      <li>Cooperating with System Analysts to push product to production,</li>
-                      <li>Providing Unit Tests and additionally helping testing teams with tests,</li>
-                      </ul>
+            <li class="subsec-title">Other development</li> 
+              <ul class="subsec-desc" [ngClass]="{dark4: darkMode}">
+                <li>Angular</li>
+                <li>Basic React</li>
+                <li>JavaScript/TypeScript, HTML, CSS</li>
+                <li>Full MEAN Stack; MongoDB, Express, NodeJS and SQL</li>
               </ul>
-          </section>
-          <section class="title" [ngClass]="{dark2: darkMode}">
-              <h2><img class="section-icon" src="assets/lang-icon.png"/>Languages</h2>
-              <ul>
-                  <li class="title-sec"><b>English</b> - good</li>
-                  <li class="title-sec"><b>Polish</b> - native</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">
+          <img class="section-icon" src="assets/work-icon.png"/>
+          <div>Work Experience</div>
+        </div>
+        <div>
+          <ul>
+            <li class="subsec-title">Customer Service 
+              <span class="work-date">(2019-09 - 2021-11)</span>
+            </li>
+              <b class="subsec-job">Lotos - </b><i>Tarnobrzeg</i>
+            <li class="subsec-title">Pensions Administrator Entry   <span class="work-date">(2021-12 - 2023-03)</span>
+            </li>
+              <b class="subsec-job">Aon - </b> <i>Kraków</i>
+              <ul class="subsec-desc" [ngClass]="{dark4: darkMode}">
+                <li>processing scheme members requests in line with agreed deadlines,</li>
+                <li>preparing requested documentation in line with GDPR,</li>
+                <li>extracting data reports from SQL data base.</li>
               </ul>
-          </section>
-          <section class="title" [ngClass]="{dark2: darkMode}">
-              <h2><img class="section-icon" src="assets/info-icon-cv.png"/>Additional Information</h2>
-              <ul [ngClass]="{dark4: darkMode}">
-                  <li>Angular, JavaScript/TypeScript, HTML, CSS/Bootstrap, Full MEAN Stack</li>
-                  <li>Practcial skill in Excel, Word, Adobe PDF</li>
-                  <li>Experience in data analysis and work with SQL</li>
-                  <li>System Delivery Life Cycle type of work experience</li>
-                  <li>Basic knowledge of Adobe Illustrator and Photoshop</li>
-                  <li>Experience in working with the client, service and in problem solving attitude</li>
-                  <li>Communicativeness, the ability to listen to others and to explaining processes related issues</li>
-                  <li>Motivation to grow through work and willingness to learn new knowledge, develop</li>
-                  <li>Respect and responsible approach to the work performed, punctuality</li>
-              </ul>
-          </section>
-          <section [ngClass]="{dark2: darkMode}">
-                <hr style="margin-bottom: 10px; margin-top: 10px;">
-              <p  class="title-sec">
-                  I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.
-              </p>
-          </section>
-      </main>
+            <li class="subsec-title"><b>GBS Configuration Analyst </b>
+              <span class="work-date">(2023-04 - now)</span>
+            </li>
+              <b class="subsec-job">Aon - </b> <i>Kraków</i>
+                <ul class="subsec-desc" [ngClass]="{dark4: darkMode}">
+                  <li>Implementing website in the internal environment accordingly to documentation,</li>
+                  <li>Cooperating with System Analysts to push product to production,</li>
+                  <li>Providing Unit Tests and additionally helping testing teams with tests,</li>
+                </ul>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="section-title">
+          <img class="section-icon" src="assets/lang-icon.png"/>
+          <div>Languages</div>
+        </div>
+        <ul>
+          <li class="subsec-title"><b>Polish </b>
+            <span class="work-date">- Native</span>
+          </li>
+          <li class="subsec-title"><b>English </b>
+            <span class="work-date">- C1</span>
+          </li>
+        </ul>
+      </div>
+      <div >
+        <div class="section-title">
+          <img class="section-icon" src="assets/info-icon-cv.png"/>
+          <div>Additional Information</div>
+        </div>
+        <ul style="margin-top: 10px;" class="subsec-desc"[ngClass]="{dark4: darkMode}">
+            <li>Angular, JavaScript/TypeScript, HTML, CSS/Bootstrap, Full MEAN Stack</li>
+            <li>Practcial skill in Excel, Word, Adobe PDF</li>
+            <li>Experience in data analysis and work with SQL</li>
+            <li>System Delivery Life Cycle type of work experience</li>
+            <li>Basic knowledge of Adobe Illustrator and Photoshop</li>
+            <li>Experience in working with the client, service and in problem solving attitude</li>
+            <li>Communicativeness, the ability to listen to others and to explaining processes related issues</li>
+            <li>Motivation to grow through work and willingness to learn new knowledge, develop</li>
+            <li>Respect and responsible approach to the work performed, punctuality</li>
+        </ul>
+      </div>
+      <div>
+        <hr style="margin-bottom: 10px; margin-top: 30px;">
+        <p>
+          I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.
+      </p>
+      </div>
+    </div>
   </div>
 </div>
-
-
-
