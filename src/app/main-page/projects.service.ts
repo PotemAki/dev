@@ -9,6 +9,7 @@ export class ProjectsService {
   navigateProjects = new Subject<void>()
   navigateJSProjects = new Subject<void>()
   navigateHome = new Subject<void>()
+  navigateCV = new Subject<void>()
   darkMode = new BehaviorSubject<boolean>(false)
 
 

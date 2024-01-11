@@ -24,24 +24,50 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   onHome() {
-    this.router.navigate(['/'])
-    this.projectsService.navigateHome.next()
+    if (this.router.url.includes('/cv')) {  
+        this.projectsService.navigateCV.next()
+        setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 2);
+      } else {
+        this.projectsService.navigateHome.next()
+      }
   }
   onProjects() {
-    this.router.navigate(['/'])
-    this.projectsService.navigateProjects.next()
-    
+    if (this.router.url.includes('/cv')) {  
+      this.router.navigate(['/']);
+      setTimeout(() => {
+        this.projectsService.navigateProjects.next()
+      }, 2);
+    } else {
+      this.projectsService.navigateProjects.next()
+    }
   }
   onJSProjects() {
-    this.router.navigate(['/'])
-    this.projectsService.navigateJSProjects.next()
+
+    if (this.router.url.includes('/cv')) {  
+      this.router.navigate(['/']);
+      setTimeout(() => {
+        this.projectsService.navigateJSProjects.next()
+      }, 2);
+    } else {
+      this.projectsService.navigateJSProjects.next()
+    }
   }
   onAboutMe() {
     this.dialogService.openAboutMeDialog({});
   }
   onCV() {
-    this.router.navigate(['/cv'])
+    if (this.router.url.includes('/cv')) {  
+      this.projectsService.navigateCV.next()
+    } else {
+        this.projectsService.navigateHome.next()
+        setTimeout(() => {
+          this.router.navigate(['/cv']);
+        }, 2);
+    }
   }
+
   toDarkMode() {
     if (this.darkMode) {
       this.projectsService.darkMode.next(false)

@@ -1,16 +1,14 @@
-<mat-drawer-container class="container" autosize >
+<mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav" mode="over" [ngClass]="{dark: darkMode}">
     <div class="inside-sidenav">
-        <button class="nav-button2" mat-raised-button (click)="onHome()" 
+        <button class="nav-button2" mat-flat-button (click)="onHome()" 
         [ngClass]="{dark2: darkMode}">Home</button>
-        <button class="nav-button2" mat-raised-button (click)="onCV()" 
+        <button class="nav-button2" mat-flat-button (click)="onCV()" 
         [ngClass]="{dark2: darkMode}">CV</button>
-    </div>
-    <div class="inside-sidenav_2">
-      <button class="nav-button2" mat-raised-button (click)="onProjects()"
-      [ngClass]="{dark2: darkMode}">Main Projects</button>
-      <button class="nav-button2" mat-raised-button (click)="onJSProjects()"
-      [ngClass]="{dark2: darkMode}">JavaScript Projects</button>
+        <button class="nav-button2" mat-flat-button (click)="onProjects()"
+        [ngClass]="{dark2: darkMode}">Main Projects</button>
+        <button class="nav-button2" mat-flat-button (click)="onJSProjects()"
+        [ngClass]="{dark2: darkMode}">JavaScript Projects</button>
     </div>
     <hr>
     <div class="inside-sidenav_3">
