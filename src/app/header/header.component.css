@@ -120,17 +120,38 @@ mat-drawer-container {
     color: #383838;
   }
 }
-
+.hamburger-menu{
+  display: none;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+.logo span{
+  font-size: 40px;
+  cursor: pointer;
+}
 @media (max-width: 700px) {
   .sidenav{
     position: fixed;
     width: 40%;
     max-width: 300px;
   }
+  .logo{
+    margin-left: 0px;
+  }
 }
 @media (max-width: 520px) {
+  .logo{
+    display: none;
+  }
   .right-header{
     display: none;
+  }
+  .hamburger-menu{
+    display: block;
   }
   .sidenav{
     width: 70%;

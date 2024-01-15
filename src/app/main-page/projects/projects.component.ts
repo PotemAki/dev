@@ -56,10 +56,10 @@ export class ProjectsComponent implements OnInit, OnDestroy{
   }
   openDialogVariant3() {
     this.dialogService.openDialog({
-      title: 'Apps',
-      contentLine1: `Reactive ToDo: We can hold a ToDo and move it around to either delete or archive our task.`,
-      contentLine2: `We can create multiple groups for our list of Todos.`,
-      contentLine3: `Mini Apps: We can dynamically transfer multiple value units or generate random colors for our use.`,
+      title: 'Arcadia',
+      contentLine1: `Reactive ToDo: We can hold a ToDo and move it around to either delete or archive our task. We can create multiple groups for our list of Todos.`,
+      contentLine2: `Apps: Calculator, StopWatch, Convert-Values and Generate color`,
+      contentLine3: `Game: Let us play a game with the computer, which randomly generates a outcome, there is an option to autoplay too.`,
       contentLine4: `Weather App: Using an API server, we can check the current time and weather conditions across different cities.`
     });
     this.trackOutboundLink('apps-desc')

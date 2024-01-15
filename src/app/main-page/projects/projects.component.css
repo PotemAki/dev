@@ -49,8 +49,9 @@
   font-weight: bold;
   width: 80%;
   margin-top: -15px;
-  font-size: 16px;
-  color: rgb(110, 110, 110);
+  letter-spacing: 1px;
+  font-size: 15px;
+  color: rgb(87, 87, 87);
   transition: 0.3s;
 }
 .icon-project{

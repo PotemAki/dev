@@ -6,9 +6,9 @@
         <button class="nav-button2" mat-flat-button (click)="onCV()" 
         [ngClass]="{dark2: darkMode}">CV</button>
         <button class="nav-button2" mat-flat-button (click)="onProjects()"
-        [ngClass]="{dark2: darkMode}">Main Projects</button>
-        <button class="nav-button2" mat-flat-button (click)="onJSProjects()"
-        [ngClass]="{dark2: darkMode}">JavaScript Projects</button>
+        [ngClass]="{dark2: darkMode}">Projects</button>
+        <!-- <button class="nav-button2" mat-flat-button (click)="onJSProjects()"
+        [ngClass]="{dark2: darkMode}">JavaScript Projects</button> -->
     </div>
     <hr>
     <div class="inside-sidenav_3">
@@ -21,9 +21,14 @@
     </div>
   </mat-drawer>  
   <mat-toolbar class="header-content" [ngClass]="{dark: darkMode}">
-    <button mat-icon-button (click)="drawer.toggle()">
+    <button class="hamburger-menu" mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
+    <div class="logo shine-button" [ngClass]="{dark5: darkMode}">
+      <span class="material-symbols-outlined" (click)="onHome()">
+        crowdsource
+        </span>
+    </div>
     <span class="my-app shine-button" routerLink="/" [ngClass]="{dark5: darkMode}" (click)="onHome()">Michał.dev</span>
     <span class="spacer"></span>
     <div class="dark-mode" *ngIf="!darkMode">
