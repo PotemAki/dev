@@ -108,6 +108,14 @@ export class ProjectsComponent implements OnInit, OnDestroy{
     });
     this.trackOutboundLink('posts-desc')
   }
+  openDialogVariant11() {
+    this.dialogService.openDialog({
+      title: 'Restaurant App',
+      contentLine1: `Animations in view,`,
+      contentLine2: `Connected Google Maps API`,
+      contentLine3: `Interesting, well balanced, responsive and modern look.`,
+    });
+  }
   
   trackOutboundLink(label: string) {
     // Send an event to Google Analytics

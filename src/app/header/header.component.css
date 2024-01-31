@@ -38,6 +38,7 @@ mat-drawer-container {
   position: fixed;
   z-index: 9999;
   background-color: white;
+  padding: 0px 50px 0px 60px;
   transition: 0.3s;
 }
 .my-app{
@@ -127,11 +128,16 @@ mat-drawer-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 50px;
 }
 .logo span{
   font-size: 40px;
   cursor: pointer;
+}
+
+@media (max-width: 1060px) {
+  .header-content {
+    padding: 0px 20px;
+  }
 }
 @media (max-width: 700px) {
   .sidenav{
@@ -139,8 +145,9 @@ mat-drawer-container {
     width: 40%;
     max-width: 300px;
   }
-  .logo{
-    margin-left: 0px;
+  .header-content {
+    padding: 0px 10px;
+    transition: 0.3s;
   }
 }
 @media (max-width: 520px) {
