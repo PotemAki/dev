@@ -121,6 +121,22 @@
   color: rgb(201, 201, 201);
 }
 
+
+/**ANIMATIONS**/
+.body-cv{
+  opacity: 0;
+  animation: opacity 0.7s forwards; 
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 780px) {
   .header{
     flex-direction: column;

@@ -6,6 +6,12 @@
   height: 100%;
   transition: 0.3s;
 }
+.animation-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .project-container{
   display: flex;
   align-items: center;
@@ -35,6 +41,7 @@
   width: 100%;
   height: 100%;
   min-height: 300px;
+  max-height: 289px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,14 +50,14 @@
 .title{
   font-size: 26px;
   font-weight: bold;
-  font-family: "Raleway", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 .desc{
   font-weight: bold;
   width: 80%;
-  margin-top: -15px;
+  margin-top: -10px;
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 14px;
   color: rgb(87, 87, 87);
   transition: 0.3s;
 }
@@ -76,6 +83,7 @@
   justify-content: space-between;
 }
 .footer-button{
+  margin-bottom: -10px;
   height: 100px;
   width: 100px;
   transition: 0.3s;
@@ -90,6 +98,7 @@
   width: 40px;
 }
 .tech-used-icons{
+  transform: translateY(10px);
   display: flex;
 }
 .confirmation-dialog {
@@ -231,6 +240,36 @@ h1 em {
 .dark6:hover{
   background-color: rgb(51, 51, 51);
 }
+
+/**ANIMATIONS**/
+
+.hidden{
+  opacity: 0;
+}
+.animation{
+  opacity: 0;
+  animation: opacity 0.7s forwards; 
+}
+
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @media (max-width: 980px) {
   .one-row-js{
     flex-direction: column;
@@ -301,6 +340,9 @@ h1 em {
   .right-side{
     margin-top: 10px;
     width: 120%;
+  }
+  .desc{
+    font-size: 13px;
   }
 }
 @media (max-width: 350px) {

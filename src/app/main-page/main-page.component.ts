@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { DialogService } from './projects/dialog.service';
 import { ProjectsService } from './projects.service';
 import { Subscription } from 'rxjs';
@@ -42,7 +42,7 @@ declare let gtag: Function;
     trigger('fadeInOut', [
       state('void', style({ opacity: 0 })),
       transition('void => *', [
-        animate(300, style({ opacity: 1 }))
+        animate(500, style({ opacity: 1 }))
       ]),
       transition('* => void', [
         animate(0, style({ opacity: 1}))
@@ -50,7 +50,7 @@ declare let gtag: Function;
     ]),
   ],
 })
-export class MainPageComponent implements OnInit, OnDestroy{
+export class MainPageComponent implements OnInit, OnDestroy, AfterViewInit{
   @ViewChild('appProjects', { read: ElementRef }) appProjects: ElementRef;
   @ViewChild('appHome', { read: ElementRef }) appHome: ElementRef;
   sub1: Subscription;
@@ -70,7 +70,30 @@ export class MainPageComponent implements OnInit, OnDestroy{
     this.isDarkModeSub = this.projectsService.darkMode.subscribe((res) => {
       this.darkMode = res
     })
+    
   }
+  ngAfterViewInit(): void {
+    this.observeElement(this.appProjects.nativeElement, 'appprojects');
+  }
+  observeElement(element: HTMLElement, component: string) {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.17
+    };
+   
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            this.projectsService.runAnimation.next(component)
+        }
+      });
+    }, options);
+
+    observer.observe(element);
+  }
+
+
   openAboutMe() {
     this.dialogService.openAboutMeDialog({});
     this.trackOutboundLink('dialog-aboutme')

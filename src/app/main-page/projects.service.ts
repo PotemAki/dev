@@ -11,6 +11,7 @@ export class ProjectsService {
   navigateHome = new Subject<void>()
   navigateCV = new Subject<void>()
   darkMode = new BehaviorSubject<boolean>(false)
+  runAnimation = new BehaviorSubject<string>('none')
 
 
   autoDarkMode() {
