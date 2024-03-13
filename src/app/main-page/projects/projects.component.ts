@@ -59,6 +59,9 @@ export class ProjectsComponent implements OnInit, OnDestroy{
     if (project === 'project5') {
       this.projectDialog5()
     }
+    if (project === 'project6') {
+      this.projectDialog6()
+    }
   }
 
   projectDialog1() {
@@ -101,6 +104,16 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       contentLine4: `We can add multiple languages and additional information.`,
       contentLine5: `We can input a link to our portfolio and give that link a specific name.`,
       contentLine6: `We can download our CV in PDF format (the link to the portfolio still works) - this is recommended on desktop.`
+    });
+  }
+  projectDialog6() {
+    this.dialogService.openDialog({
+      title: 'Shop App',
+      contentLine1: `Add multiple values of products to cart.`,
+      contentLine2: `Dynamically searching through product database.`,
+      contentLine3: `Different types of filters we can apply at once or separately.`,
+      contentLine4: `Dynamic product information: ratings and number of reviews. We can add our own comment affecting rating and reviews.`,
+      contentLine5: `The landing page will show us products with the most reviews. The product's subheader will advertise the product with the best rating.`,
     });
   }
 

@@ -1,5 +1,16 @@
 export const projectsAngular = [
   {
+    title: 'Shop App', 
+    desc: `Compact shop application with demo product's database, that we can filter and search through.`,
+    img: 'assets/projects/shop-app.jpg',
+    live: 'https://potemaki.github.io/shop-app/products',
+    code: 'https://github.com/PotemAki/shop-app/tree/master',
+    dialog: 'project6',
+    icons: {
+      icon1: 'assets/js-icon.svg',
+      icon2: 'assets/angular-icon.svg'
+    }},
+  {
     title: 'Restaurant App', 
     desc: 'Professionally looking complete restaurant website. Attention to detail and animations, currently top looking project.',
     img: 'assets/projects/restaurant-app.png',
