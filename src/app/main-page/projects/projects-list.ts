@@ -3,7 +3,7 @@ export const projectsAngular = [
     title: 'Shop App', 
     desc: `Compact shop application with demo product's database, that we can filter and search through.`,
     img: 'assets/projects/shop-app.jpg',
-    live: 'https://potemaki.github.io/shop-app/products',
+    live: 'https://potemaki.github.io/shop-app/',
     code: 'https://github.com/PotemAki/shop-app/tree/master',
     dialog: 'project6',
     icons: {
