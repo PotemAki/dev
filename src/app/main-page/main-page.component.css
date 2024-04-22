@@ -55,7 +55,6 @@
 }
 .icons {
   width: 100%; 
-  max-width: 90px;
   display: flex;
   flex-direction: column;
 }
@@ -64,6 +63,7 @@
   margin-right: 5px;
   width: 100%;
   transition: 0.2s;
+  max-width: 90px;
 }
 .icon:hover{
   width: 90%;
@@ -157,6 +157,10 @@
   .subtext{
     width: 90%;
   }
+  .icon{
+    width: 50%;
+    max-width: 50px;
+  }
 }
 @media (max-width: 450px) {
   .skill-set {
@@ -173,15 +177,19 @@
     margin-top: -20px;
     width: 60%;
   }
-  .icon{
-    width: 50%;
-  }
   .footer{
     margin-top: 10px;
   }
   .header-title{
     font-size: 33px;
     line-height: 35px;
+  }
+}
+
+@media(max-width: 350px) {
+  .icon{
+    width: 50%;
+    max-width: 30px;
   }
 }
 @media (max-height: 900px) {

@@ -21,20 +21,20 @@ export const projectsAngular = [
       icon1: 'assets/js-icon.svg',
       icon2: 'assets/angular-icon.svg'
     }},
-  {
-    title: 'Posts App', 
-    desc: 'Full-Stack Application, where we can add posts and many more. This was created on both front-end and backend.',
-    img: 'assets/projects/posts-app2.png',
-    live: 'http://potemaki.s3-website.eu-north-1.amazonaws.com',
-    code: 'https://github.com/PotemAki/posts-app',
-    dialog: 'project2',
-    icons: {
-      icon1: 'assets/js-icon.svg',
-      icon2: 'assets/angular-icon.svg',
-      icon3: 'assets/mongo-icon.svg',
-      icon4: 'assets/express-icon.svg',
-      icon5: 'assets/nodejs-icon.svg'
-    }},
+  // {
+  //   title: 'Posts App', 
+  //   desc: 'Full-Stack Application, where we can add posts and many more. This was created on both front-end and backend.',
+  //   img: 'assets/projects/posts-app2.png',
+  //   live: 'http://potemaki.s3-website.eu-north-1.amazonaws.com',
+  //   code: 'https://github.com/PotemAki/posts-app',
+  //   dialog: 'project2',
+  //   icons: {
+  //     icon1: 'assets/js-icon.svg',
+  //     icon2: 'assets/angular-icon.svg',
+  //     icon3: 'assets/mongo-icon.svg',
+  //     icon4: 'assets/express-icon.svg',
+  //     icon5: 'assets/nodejs-icon.svg'
+  //   }},
   {
     title: 'Arcadia', 
     desc: 'Application that includes many mini apps inside from other projects: Reactive ToDo, Calculator, StopWatch, Rock-Paper-Scissors Game, Weather API App and more.',
